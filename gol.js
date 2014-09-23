@@ -1,4 +1,5 @@
-onway's Game of Life.
+     /*
+     *Conway's Game of Life.
      *
      * A simple Javascript implementation by ankr.
      *
