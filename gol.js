@@ -5,12 +5,7 @@
      *
      * @author http://ankr.dk
      */
-    var canvas = document.getElementById('c').getContext('2d'),
-        cells = [];
-    //canvas.strokeStyle = '#e1e1e1';
-    //canvas.fillStyle = 'cadetblue';
-     
-    init();
+    
      
     /**
      * Initialize game.
