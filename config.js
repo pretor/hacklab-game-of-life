@@ -3,7 +3,7 @@ rulesArray = {
 		'condition': 2,		//Broj celija
 		'conop': '<',		//Operator
 		'priority': 0,		//Prioritet
-		'state': 1,			//Stanje (0=mrtva, 1=ziva, 2=crna)
+		'state': 1,		//Stanje (0=mrtva, 1=ziva, 2=crna)
 		'result': 0,		//Dobijena celija
 		'color': 000000		//Boja celije
 	},
