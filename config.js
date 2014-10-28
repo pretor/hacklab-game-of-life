@@ -1,10 +1,10 @@
 rulesArray = {
 	1: {
-		'condition': 2,
-		'conop': '<',
-		'priority': 0,
-		'state': 1,
-		'result': 0
+		'condition': 2, //kolko ima okolo
+		'conop': '<', //jel ima tacno ili vise ili manje?
+		'priority': 0, //prioritet
+		'state': 1, //trenutno stanje
+		'result': 0 //koje treba da bude
 	},
 	2: {
 		'condition': 2,
