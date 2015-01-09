@@ -82,7 +82,7 @@ rulesArray = {
 	11: {
 		'condition': 4,
 		'conop': '=',
-		'priority': 12,
+		'priority': 11,
 		'state': 1,
 		'result': 1,
 		'color': '5959ff'
@@ -90,7 +90,7 @@ rulesArray = {
 	12: {
 		'condition': 4,
 		'conop': '=',
-		'priority': 13,
+		'priority': 12,
 		'state': 2,
 		'result': 1,
 		'color': '59ff59'
