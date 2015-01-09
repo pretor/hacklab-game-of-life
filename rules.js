@@ -17,12 +17,14 @@ var rules = function(cell, count) {
 		// 	}
 		// }
 		// return 1;
+
 	}
 	
 	this.conditionCheck = function() {
+		//console.log("rulz niz:"+rulesArray[1].conop);
 		var keyArray = [];
 		for (var key in rulesArray) {
-			console.log(rulesArray[key].state);
+			//console.log(rulesArray[key].state);
 
 			if (rulesArray[key].state == cell) {
 				continue;
@@ -35,7 +37,7 @@ var rules = function(cell, count) {
 					}
 				}
 				case '=': {
-					if (rulesArray[key].condition = count) {
+					if (rulesArray[key].condition == count) {
 						keyArray.push(rulesArray[key]);
 					}
 				}
@@ -46,15 +48,16 @@ var rules = function(cell, count) {
 				}
 			}
 		}
-		var asd = priorityCheck(keyArray);
+		var asd = this.priorityCheck(keyArray);
 		return rulesArray[asd].state;
 
 	}
 	this.priorityCheck = function(keyArray) {
-		var maxkey = keyArray[0];
+		console.log(keyArray);
+		var maxkey = 0;
 		for (var i in keyArray) {
-			if (rulesArray[keyArray[i]].priority > rulesArray[maxkey].priority){
-				maxkey = keyArray[i];
+			if (keyArray[i].priority > keyArray[maxkey].priority){
+				maxkey = i;
 			}
 		}
 		return maxkey;

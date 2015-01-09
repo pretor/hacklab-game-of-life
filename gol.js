@@ -93,7 +93,7 @@
                     count = _countNeighbours(x, y);
                
                 var rulez = new rules(cell, count);
-                result[x][y] = rulez.process();
+                result[x][y] = rulez.conditionCheck();
 
             });
         });
@@ -103,7 +103,7 @@
         draw();
     }
 
-    console.log(rulesArray);
+
      
     /**
      * Draw cells on canvas
