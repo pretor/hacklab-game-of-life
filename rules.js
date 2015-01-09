@@ -51,11 +51,9 @@ var rules = function(cell, count) {
 
 	}
 	this.priorityCheck = function(keyArray) {
-		var max = rulesArray[keyArray[0]].priority;
 		var maxkey = keyArray[0];
 		for (var i in keyArray) {
-			if (rulesArray[keyArray[i]].priority > max){
-				max = rulesArray[keyArray[i]].priority;
+			if (rulesArray[keyArray[i]].priority > rulesArray[maxkey].priority){
 				maxkey = keyArray[i];
 			}
 		}
