@@ -46,7 +46,7 @@ rulesArray = {
 		'state': 1,
 		'result': 2,
 		'color': 'ffffff'
-	}
+	},
 	7: {
 		'condition': 3,
 		'conop': '=',
@@ -54,7 +54,7 @@ rulesArray = {
 		'state': 2,
 		'result': 2,
 		'color': 'ffffff'
-	}
+	},
 	8: {
 		'condition': 5,
 		'conop': '>',
@@ -62,7 +62,7 @@ rulesArray = {
 		'state': 2,
 		'result': 1,
 		'color': 'ff0000'
-	}
+	},
 	9: {
 		'condition': 5,
 		'conop': '<',
@@ -70,7 +70,7 @@ rulesArray = {
 		'state': 1,
 		'result': 1,
 		'color': 'ff5959'
-	}
+	},
 	10: {
 		'condition': 2,
 		'conop': '=',
@@ -78,7 +78,7 @@ rulesArray = {
 		'state': 2,
 		'result': 1,
 		'color': 'ff5959'
-	}
+	},
 	11: {
 		'condition': 4,
 		'conop': '=',
@@ -86,7 +86,7 @@ rulesArray = {
 		'state': 1,
 		'result': 1,
 		'color': '5959ff'
-	}
+	},
 	12: {
 		'condition': 4,
 		'conop': '=',
