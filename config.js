@@ -2,7 +2,7 @@ rulesArray = {
 	1: {
 		'condition': 2,		//Broj celija
 		'conop': '<',		//Operator
-		'priority': 0,		//Prioritet
+		'priority': 1,		//Prioritet
 		'state': 1,		//Stanje (0=mrtva, 1=ziva, 2=crna)
 		'result': 0,		//Dobijena celija
 		'color': '000000'	//Boja celije
@@ -10,7 +10,7 @@ rulesArray = {
 	2: {
 		'condition': 2,
 		'conop': '=',
-		'priority': 1,
+		'priority': 2,
 		'state': 1,
 		'result': 1,
 		'color': '00ff00'
@@ -18,7 +18,7 @@ rulesArray = {
 	3: {
 		'condition': 3,
 		'conop': '=',
-		'priority': 1,
+		'priority': 3,
 		'state': 1,
 		'result': 1,
 		'color': '0000ff'
@@ -26,7 +26,7 @@ rulesArray = {
 	4: {
 		'condition': 3,
 		'conop': '>',
-		'priority': 1,
+		'priority': 4,
 		'state': 1,
 		'result': 0,
 		'color': '000000'
@@ -34,7 +34,7 @@ rulesArray = {
 	5: {
 		'condition': 3,
 		'conop': '=',
-		'priority': 2,
+		'priority': 5,
 		'state': 0,
 		'result': 1,
 		'color': '00ff00'
@@ -42,7 +42,7 @@ rulesArray = {
 	6: {
 		'condition': 7,
 		'conop': '=',
-		'priority': 1,
+		'priority': 6,
 		'state': 1,
 		'result': 2,
 		'color': 'ffffff'
@@ -50,7 +50,7 @@ rulesArray = {
 	7: {
 		'condition': 3,
 		'conop': '=',
-		'priority': 1,
+		'priority': 7,
 		'state': 2,
 		'result': 2,
 		'color': 'ffffff'
@@ -58,7 +58,7 @@ rulesArray = {
 	8: {
 		'condition': 5,
 		'conop': '>',
-		'priority': 1,
+		'priority': 8,
 		'state': 2,
 		'result': 1,
 		'color': 'ff0000'
@@ -66,7 +66,7 @@ rulesArray = {
 	9: {
 		'condition': 5,
 		'conop': '<',
-		'priority': 1,
+		'priority': 9,
 		'state': 1,
 		'result': 1,
 		'color': 'ff5959'
@@ -74,7 +74,7 @@ rulesArray = {
 	10: {
 		'condition': 2,
 		'conop': '=',
-		'priority': 1,
+		'priority': 10,
 		'state': 2,
 		'result': 1,
 		'color': 'ff5959'
@@ -82,7 +82,7 @@ rulesArray = {
 	11: {
 		'condition': 4,
 		'conop': '=',
-		'priority': 1,
+		'priority': 12,
 		'state': 1,
 		'result': 1,
 		'color': '5959ff'
@@ -90,7 +90,7 @@ rulesArray = {
 	12: {
 		'condition': 4,
 		'conop': '=',
-		'priority': 1,
+		'priority': 13,
 		'state': 2,
 		'result': 1,
 		'color': '59ff59'
