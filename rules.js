@@ -11,13 +11,52 @@ var rules = function(cell, count) {
 	var cell = cell;
 	var count = count;
 	this.process = function() {
+		// for (var key in rulesArray) {
+		// 	for (var obj in key) {
+								
+		// 	}
+		// }
+		// return 1;
+	}
+	
+	this.conditionCheck = function() {
+		var keyArray = [];
 		for (var key in rulesArray) {
-			for (var obj in key) {
-				console.log(obj);
+			console.log(rulesArray[key].state);
+
+			if (rulesArray[key].state == cell) {
+				continue;
+			}
+	
+			switch (rulesArray[key].conop) {
+				case '<': {
+					if (rulesArray[key].condition < count) {
+						keyArray.push(rulesArray[key]);
+					}
+				}
+				case '=': {
+					if (rulesArray[key].condition = count) {
+						keyArray.push(rulesArray[key]);
+					}
+				}
+				case '>': {
+					if (rulesArray[key].condition > count) {
+						keyArray.push(rulesArray[key]);
+					}
+				}
 			}
 		}
-		return 1;
+		var asd = priorityCheck(keyArray);
+		return rulesArray[asd].state;
+
 	}
-
+	this.priorityCheck = function(keyArray) {
+		var maxkey = keyArray[0];
+		for (var i in keyArray) {
+			if (rulesArray[keyArray[i]].priority > rulesArray[maxkey].priority){
+				maxkey = keyArray[i];
+			}
+		}
+		return maxkey;
+	}
 }
-
