@@ -25,10 +25,10 @@ var rules = function(cell, count) {
 		var keyArray = [];
 		for (var key in rulesArray) {
 			//console.log(rulesArray[key].state);
-
+/*
 			if (rulesArray[key].state == cell) {
 				continue;
-			}
+			}*/
 	
 			switch (rulesArray[key].conop) {
 				case '<': {
@@ -37,7 +37,7 @@ var rules = function(cell, count) {
 					}
 				}
 				case '=': {
-					if (rulesArray[key].condition == count) {
+					if (rulesArray[key].condition == count && rulesArray[key].state == cell) {
 						keyArray.push(rulesArray[key]);
 					}
 				}
@@ -49,17 +49,30 @@ var rules = function(cell, count) {
 			}
 		}
 		var asd = this.priorityCheck(keyArray);
-		return rulesArray[asd].state;
+		return rulesArray[asd].result;
 
 	}
 	this.priorityCheck = function(keyArray) {
-		console.log(keyArray);
-		var maxkey = 0;
+		//console.log(keyArray);
+		priorityArray = [];
 		for (var i in keyArray) {
-			if (keyArray[i].priority > keyArray[maxkey].priority){
-				maxkey = i;
-			}
+			keyArray[i].priority
+			priorityArray.push(keyArray[i].priority);
 		}
-		return maxkey;
+
+		
+		maxPriority = Math.max.apply(Math, priorityArray);
+console.log(maxPriority)
+		 for (var key in rulesArray) {
+
+            if (rulesArray[key].priority == maxPriority) {
+                max = parseInt(key)-1;
+            }
+        }
+		
+		//console.log(maxkey)
+		//console.log(max)
+		console.log(key)
+		return key;
 	}
 }

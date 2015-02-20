@@ -47,11 +47,14 @@
     }
 
     function seedRestart(){
+       
         clearGrid();
-        randomSeed(1000, 64, 64).forEach(function(point) {
+        randomSeed(500, 64, 64).forEach(function(point) {
             cells[point[0]][point[1]] = 1;
+
             
         });
+        draw();
 
     }
      
@@ -93,6 +96,7 @@
                     count = _countNeighbours(x, y);
                
                 var rulez = new rules(cell, count);
+                //console.log(rulez.conditionCheck());
                 result[x][y] = rulez.conditionCheck();
 
             });
@@ -114,24 +118,36 @@
             row.forEach(function(cell, y) {
                 canvas.beginPath();
                 canvas.rect(x*8, y*8, 8, 8);
-                if (cell===1) {
-                    canvas.strokeStyle = '#e1e1e1';
-                    canvas.fillStyle = 'cadetblue';
-                   
+                canvas.fillStyle = getColorFromRules(cell);                   
+                canvas.fill();
+
+                /*if (cell===1) {
+                    canvas.strokeStyle = 'blue';
+                    canvas.fillStyle = 'pink';                   
                     canvas.fill();
+
                 } else if (cell===2){
                    
                     canvas.fillStyle="black";
-                canvas.fill();
+                    canvas.fill();
                    
                    
                 } else {
                     canvas.stroke();
-                }
+                }*/
             });
         });
-        setTimeout(function() {update();}, 100);
+        setTimeout(function() {update();}, 10000);
         //window.requestAnimationFrame(update); // Too fast!
+    }
+
+    function getColorFromRules(cell) {
+        for (var key in rulesArray) {
+
+            if (rulesArray[key].result == cell) {
+                return rulesArray[key].color;
+            }
+        }
     }
 
 

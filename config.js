@@ -2,7 +2,7 @@ rulesArray = {
 	1: {
 		'condition': 2,		//Broj celija
 		'conop': '<',		//Operator
-		'priority': 1,		//Prioritet
+		'priority': 6,		//Prioritet
 		'state': 1,		//Stanje (0=mrtva, 1=ziva, 2=crna)
 		'result': 0,		//Dobijena celija
 		'color': '000000'	//Boja celije
@@ -10,15 +10,15 @@ rulesArray = {
 	2: {
 		'condition': 2,
 		'conop': '=',
-		'priority': 2,
+		'priority': 1,
 		'state': 1,
 		'result': 1,
-		'color': '00ff00'
+		'color': '0000ff'
 	},
 	3: {
 		'condition': 3,
 		'conop': '=',
-		'priority': 3,
+		'priority': 4,
 		'state': 1,
 		'result': 1,
 		'color': '0000ff'
@@ -26,7 +26,7 @@ rulesArray = {
 	4: {
 		'condition': 3,
 		'conop': '>',
-		'priority': 4,
+		'priority': 7,
 		'state': 1,
 		'result': 0,
 		'color': '000000'
@@ -34,11 +34,11 @@ rulesArray = {
 	5: {
 		'condition': 3,
 		'conop': '=',
-		'priority': 5,
+		'priority': 3,
 		'state': 0,
 		'result': 1,
 		'color': '00ff00'
-	},
+	}/*,
 	6: {
 		'condition': 7,
 		'conop': '=',
@@ -94,5 +94,5 @@ rulesArray = {
 		'state': 2,
 		'result': 1,
 		'color': '59ff59'
-	}
+	}*/
 };
